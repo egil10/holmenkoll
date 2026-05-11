@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Heart, Mountain } from "lucide-react";
+import { Github, Heart, Footprints } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <Mountain className="w-4 h-4 text-no-red" />
+            <Footprints className="w-4 h-4 text-no-red" />
             <span className="serif font-bold text-no-ink">Holmenkollstafetten</span>
           </div>
           <p className="text-sm text-no-muted leading-relaxed">
@@ -20,6 +20,8 @@ export function Footer() {
           <p className="font-semibold text-no-ink mb-3">Innhold</p>
           <ul className="flex flex-col gap-1.5 text-no-muted">
             <li><Link className="hover:text-no-red" href="/resultater">Resultater</Link></li>
+            <li><Link className="hover:text-no-red" href="/lopa">Løypa</Link></li>
+            <li><Link className="hover:text-no-red" href="/etapper">Etapper</Link></li>
             <li><Link className="hover:text-no-red" href="/historie">Historie</Link></li>
             <li><Link className="hover:text-no-red" href="/mestere">Mestere</Link></li>
             <li><Link className="hover:text-no-red" href="/sammenlign">Sammenlign</Link></li>

@@ -38,7 +38,7 @@ body {
   background-size: 32px 32px;
 }
 
-/* Norwegian flag corner accent */
+/* Single-colour vertical accent on cards (no more irritating white middle) */
 .flag-corner {
   position: relative;
   overflow: hidden;
@@ -47,12 +47,23 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 6px; height: 100%;
-  background: linear-gradient(180deg, #BA0C2F 0%, #BA0C2F 33%, #FFFFFF 33%, #FFFFFF 66%, #00205B 66%, #00205B 100%);
+  width: 4px; height: 100%;
+  background: var(--no-red);
+}
+.flag-corner-blue::before { background: var(--no-blue); }
+
+/* Page-wide thin accent line — solid red, never the empty-looking 3-stripe */
+.flag-bar {
+  background: var(--no-red);
 }
 
-.flag-bar {
-  background: linear-gradient(90deg, #BA0C2F 0%, #BA0C2F 33%, #FFFFFF 33%, #FFFFFF 66%, #00205B 66%, #00205B 100%);
+/* Optional dense repeated stripe for hero edges — never used at full height */
+.flag-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    #BA0C2F 0px, #BA0C2F 18px,
+    #00205B 18px, #00205B 36px
+  );
 }
 
 /* Card */

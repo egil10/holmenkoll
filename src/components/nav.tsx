@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Github, Menu, X, Flag } from "lucide-react";
+import { Github, Menu, X, Footprints } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
   { href: "/", label: "Hjem" },
   { href: "/resultater", label: "Resultater" },
+  { href: "/lopa", label: "Løypa" },
+  { href: "/etapper", label: "Etapper" },
   { href: "/historie", label: "Historie" },
   { href: "/mestere", label: "Mestere" },
   { href: "/sammenlign", label: "Sammenlign" },
@@ -43,7 +45,7 @@ export function Nav() {
         <div className="h-16 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2.5 group">
             <span className="w-9 h-9 rounded-lg flex items-center justify-center bg-no-red text-white shadow-sm">
-              <Flag className="w-4.5 h-4.5" strokeWidth={2.2} />
+              <Footprints className="w-[18px] h-[18px]" strokeWidth={2.2} />
             </span>
             <span className="flex flex-col leading-tight">
               <span className="serif text-lg font-bold text-no-ink tracking-tight">

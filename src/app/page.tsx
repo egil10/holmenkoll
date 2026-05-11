@@ -5,12 +5,13 @@ import {
   CalendarDays,
   Mountain,
   Award,
-  Flag,
+  Footprints,
   Timer,
   Trophy,
   Sparkles,
   MapPin,
   ChevronRight,
+  Map as MapIcon,
 } from "lucide-react";
 import { StatCard } from "@/components/stat-card";
 import { SectionHeader } from "@/components/section-header";
@@ -68,7 +69,7 @@ export default function HomePage() {
                 <CalendarDays className="w-4 h-4 text-no-blue" /> Siden 1923
               </span>
               <span className="flex items-center gap-1.5">
-                <Flag className="w-4 h-4 text-no-red" /> Arrangør: IK Tjalve
+                <Footprints className="w-4 h-4 text-no-red" /> Arrangør: IK Tjalve
               </span>
             </div>
           </div>
@@ -278,9 +279,23 @@ export default function HomePage() {
             {
               href: "/resultater",
               title: "Resultater",
-              text: "Topp-resultater fra 2024–2026 i menn og kvinner elite.",
-              icon: Flag,
+              text: "Alle klasser, alle år. Filtrer på elite, senior, junior, veteran, bedrift og mer.",
+              icon: Footprints,
               accent: "blue",
+            },
+            {
+              href: "/lopa",
+              title: "Løypa",
+              text: "Interaktivt kart over hele løypa, alle 15 etapper og hvordan traséen har endret seg.",
+              icon: MapIcon,
+              accent: "red",
+            },
+            {
+              href: "/etapper",
+              title: "Etapper & rekorder",
+              text: "Etapperekorder, lengste oppoverbakker og hvilke etapper som faktisk avgjør.",
+              icon: Timer,
+              accent: "ink",
             },
             {
               href: "/om",
