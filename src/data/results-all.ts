@@ -4,6 +4,13 @@ import type { Result } from "./results-2026";
 import { mennElite2026, kvinnerElite2026 } from "./results-2026";
 import { mennElite2025 } from "./results-2025";
 import { mennElite2024, kvinnerElite2024 } from "./results-2024";
+import {
+  mennBedrift2026Full,
+  kvinnerBedrift2026Full,
+  veldedige2026Full,
+} from "./results-2026-full";
+import { mosjonMenn2026Full } from "./results-2026-mosjon-menn";
+import { mosjonKvinner2026Full } from "./results-2026-mosjon-kvinner";
 
 const r = (
   rows: Array<[number, string, string]>
@@ -92,62 +99,7 @@ const kvinnerSuperveteran2026 = r([
   [5, "Loddefjordløperne", "1:19:32"],
 ]);
 
-const mennBedrift2026 = r([
-  [1, "EY Herrer", "0:51:58"],
-  [2, "Löplabbet Norge 3", "0:52:57"],
-  [3, "Norconsult Herrer", "0:52:59"],
-  [4, "Pareto Securities 1", "0:53:29"],
-  [5, "Deloitte Elite Herrer", "0:53:34"],
-  [6, "PwC xLos Herrer", "0:53:42"],
-  [7, "Skanska Aktiv", "0:53:57"],
-  [8, "KPMG Herrer Elite", "0:54:44"],
-  [9, "BDO Elite Herrer", "0:55:13"],
-  [10, "Arctic Menn 1", "0:55:19"],
-  [11, "DNB Bil Elite 1", "0:55:30"],
-  [12, "Rystad Energy Power", "0:55:33"],
-  [13, "Equinor BIL Oslo Herrer", "0:55:50"],
-  [14, "Multiconsult Herrer", "0:56:14"],
-  [15, "AF Gruppen Herrer", "0:56:32"],
-]);
-
-const kvinnerBedrift2026 = r([
-  [1, "EY Damer", "1:03:09"],
-  [2, "PwC xLos Damer", "1:03:19"],
-  [3, "Norconsult Kvinner", "1:05:05"],
-  [4, "Oslo Politis Idrettslag", "1:05:58"],
-  [5, "Deloitte Elite Damer", "1:06:00"],
-  [6, "KPMG Damer Elite", "1:06:29"],
-  [7, "Statnett BIL Kvinner", "1:07:46"],
-  [8, "BDO Elite Kvinner", "1:08:51"],
-  [9, "Advokatfirmaet Haavind 3", "1:09:07"],
-  [10, "Advokatfirmaet Wiersholm 4", "1:10:00"],
-]);
-
-const mosjonMenn2026 = r([
-  [1, "Tjommiene TC", "0:53:55"],
-  [2, "Midt-Troms Rørservice", "0:53:56"],
-  [3, "Bish på Tish x Antilope", "0:53:57"],
-  [4, "Team Svimus", "0:54:19"],
-  [5, "Clos Lagarto", "0:54:56"],
-  [6, "Schonhowd Fysioterapi", "0:55:21"],
-  [7, "Frogner Runners", "0:55:26"],
-  [8, "Advokatfirmaet Haavind 1", "0:55:41"],
-  [9, "Wikborg Rein BIL 1", "0:55:59"],
-  [10, "Juul & Partners AS", "0:56:03"],
-]);
-
-const mosjonKvinner2026 = r([
-  [1, "Löplabbet Norge 1", "0:59:41"],
-  [2, "Bull Aktiv 1", "0:59:41"],
-  [3, "Team Dæhlie Runner", "0:59:42"],
-  [4, "Morgenklubben +", "0:59:45"],
-  [5, "Kickstart Bedrift", "1:01:17"],
-  [6, "Active Brands 1", "1:03:09"],
-  [7, "Advokatfirmaet Arntzen Grette 3", "1:03:14"],
-  [8, "SK Vidar Super Miks", "1:03:33"],
-  [9, "Bull Aktiv 2", "1:04:14"],
-  [10, "Visma SW Int. Fireball", "1:04:26"],
-]);
+// bedrift/mosjon expanded sets live in results-2026-full.ts and results-2026-mosjon-*.ts
 
 const studenterMenn2026 = r([
   [1, "Janus Ski- og Løpeklubb", "0:55:02"],
@@ -167,16 +119,7 @@ const studenterKvinner2026 = r([
   [4, "Lovstafetten Oslo 2", "1:13:49"],
 ]);
 
-const veldedige2026 = r([
-  [1, "The Bardo Foundation 1", "0:54:21"],
-  [2, "Team Right To Play", "0:56:00"],
-  [3, "The Bardo Foundation 3", "1:00:23"],
-  [4, "Gammeldalen IL", "1:05:07"],
-  [5, "Beitostølen Helsesportsenter", "1:09:54"],
-  [6, "Rettssenteret", "1:10:03"],
-  [7, "Skiforeningen 1", "1:10:09"],
-  [8, "The Bardo Foundation 4", "1:10:33"],
-]);
+// veldedige expanded set lives in results-2026-full.ts
 
 // --- 2025 ---
 const kvinnerElite2025 = r([
@@ -416,13 +359,13 @@ export const results: ResultsIndex = {
     "kvinner-veteran": kvinnerVeteran2026,
     "menn-superveteran": mennSuperveteran2026,
     "kvinner-superveteran": kvinnerSuperveteran2026,
-    "menn-bedrift": mennBedrift2026,
-    "kvinner-bedrift": kvinnerBedrift2026,
-    "bedrift-mosjonslag-flest-menn": mosjonMenn2026,
-    "bedrift-mosjonslag-flest-kvinner": mosjonKvinner2026,
+    "menn-bedrift": mennBedrift2026Full,
+    "kvinner-bedrift": kvinnerBedrift2026Full,
+    "bedrift-mosjonslag-flest-menn": mosjonMenn2026Full,
+    "bedrift-mosjonslag-flest-kvinner": mosjonKvinner2026Full,
     "menn-studenter": studenterMenn2026,
     "kvinner-studenter": studenterKvinner2026,
-    "veldedige-organisasjoner": veldedige2026,
+    "veldedige-organisasjoner": veldedige2026Full,
   },
   2025: {
     "menn-elite": mennElite2025,

@@ -83,9 +83,9 @@ export function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="w-9 h-9 flex items-center justify-center rounded-lg text-no-muted hover:text-no-ink hover:bg-no-ink/5 transition-colors"
+              className="w-8 h-8 flex items-center justify-center rounded-lg text-no-muted hover:text-no-ink hover:bg-no-ink/5 transition-colors"
             >
-              <Github className="w-4.5 h-4.5" />
+              <Github className="w-3.5 h-3.5" />
             </a>
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-no-muted hover:text-no-ink hover:bg-no-ink/5 transition-colors"

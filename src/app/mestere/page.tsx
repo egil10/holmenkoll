@@ -32,8 +32,8 @@ export default function MesterePage() {
 
       <div className="flex gap-2 mb-6">
         {[
-          { id: "menn", label: "Menn elite", icon: Trophy },
-          { id: "kvinner", label: "Kvinner elite", icon: Award },
+          { id: "menn", label: "Menn elite", icon: Trophy, color: "bg-no-red border-no-red" },
+          { id: "kvinner", label: "Kvinner elite", icon: Award, color: "bg-no-blue border-no-blue" },
         ].map((c) => {
           const Icon = c.icon;
           const active = klass === c.id;
@@ -44,7 +44,7 @@ export default function MesterePage() {
               className={cn(
                 "inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold border transition-colors",
                 active
-                  ? "bg-no-red text-white border-no-red"
+                  ? `${c.color} text-white`
                   : "bg-no-paper text-no-muted border-no-line hover:text-no-ink"
               )}
             >
@@ -65,7 +65,11 @@ export default function MesterePage() {
               key={team}
               className={cn(
                 "card p-4 flag-corner pl-5",
-                i === 0 && "ring-2 ring-no-red ring-offset-2 ring-offset-no-cream"
+                klass === "kvinner" && "flag-corner-blue",
+                i === 0 &&
+                  (klass === "kvinner"
+                    ? "ring-2 ring-no-blue ring-offset-2 ring-offset-no-cream"
+                    : "ring-2 ring-no-red ring-offset-2 ring-offset-no-cream")
               )}
             >
               <div className="flex items-center gap-2">

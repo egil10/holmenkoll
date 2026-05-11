@@ -19,6 +19,14 @@ export const mennElite2026: Result[] = [
   { rank: 8, team: "Kjelsås Langrenn", time: "0:51:37" },
   { rank: 9, team: "Heming Elite", time: "0:51:47" },
   { rank: 10, team: "Idrottslaget Gular 1", time: "0:51:59" },
+  { rank: 11, team: "Svorkmo/NOI 1", time: "0:52:21" },
+  { rank: 12, team: "Haugesund IL Friidrett", time: "0:52:23" },
+  { rank: 13, team: "IF Kamp/Vestheim", time: "0:52:54" },
+  { rank: 14, team: "Lillehammer IF", time: "0:53:12" },
+  { rank: 15, team: "Varegg Fleridrett 1", time: "0:53:16" },
+  { rank: 16, team: "Namdal løpeklubb elite Herrer", time: "0:53:40" },
+  { rank: 17, team: "Mosvik IL Friidrett", time: "0:53:45" },
+  { rank: 18, team: "Tyrving IL", time: "0:54:01" },
 ];
 
 export const kvinnerElite2026: Result[] = [

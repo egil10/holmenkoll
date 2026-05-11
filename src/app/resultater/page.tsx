@@ -66,6 +66,14 @@ export default function ResultsPage() {
   }, []);
 
   const classMeta = classes.find((c) => c.slug === resolvedClass);
+  const accent: "red" | "blue" | "neutral" =
+    classMeta?.gender === "M" ? "red" : classMeta?.gender === "K" ? "blue" : "neutral";
+  const accentBg =
+    accent === "red"
+      ? "bg-no-red text-white border-no-red"
+      : accent === "blue"
+        ? "bg-no-blue text-white border-no-blue"
+        : "bg-no-ink text-white border-no-ink";
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
@@ -112,6 +120,12 @@ export default function ResultsPage() {
               {list.map((c) => {
                 const has = availableClasses.includes(c.slug);
                 const active = resolvedClass === c.slug;
+                const activeBg =
+                  c.gender === "M"
+                    ? "bg-no-red text-white border-no-red"
+                    : c.gender === "K"
+                      ? "bg-no-blue text-white border-no-blue"
+                      : "bg-no-ink text-white border-no-ink";
                 return (
                   <button
                     key={c.slug}
@@ -121,7 +135,7 @@ export default function ResultsPage() {
                     className={cn(
                       "px-2.5 py-1 rounded-md text-xs font-medium border transition-colors",
                       active
-                        ? "bg-no-blue text-white border-no-blue"
+                        ? activeBg
                         : has
                           ? "bg-no-paper text-no-muted border-no-line hover:text-no-ink"
                           : "bg-no-line/50 text-no-muted/40 border-transparent cursor-not-allowed"
@@ -155,7 +169,16 @@ export default function ResultsPage() {
             {dateLabel[year] ?? `${year}`} · Bislett
           </span>
           {classMeta && (
-            <span className="chip chip-soft-blue">
+            <span
+              className={cn(
+                "chip",
+                classMeta.gender === "M"
+                  ? "chip-soft-red"
+                  : classMeta.gender === "K"
+                    ? "chip-soft-blue"
+                    : ""
+              )}
+            >
               <Trophy className="w-3 h-3" /> {classMeta.label} · {classMeta.code}
             </span>
           )}
@@ -173,7 +196,7 @@ export default function ResultsPage() {
       </div>
 
       {rows.length > 0 ? (
-        <ResultsTable results={rows} />
+        <ResultsTable results={rows} accent={accent} />
       ) : (
         <div className="card p-10 text-center text-no-muted">
           {query ? (

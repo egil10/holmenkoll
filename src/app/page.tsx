@@ -129,7 +129,7 @@ export default function HomePage() {
               </div>
               <span className="text-xs text-no-muted font-mono">15 etapper</span>
             </div>
-            <ResultsTable results={mennElite2026} />
+            <ResultsTable results={mennElite2026.slice(0, 10)} accent="red" />
           </div>
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -140,7 +140,7 @@ export default function HomePage() {
               </div>
               <span className="text-xs text-no-muted font-mono">15 etapper</span>
             </div>
-            <ResultsTable results={kvinnerElite2026.slice(0, 10)} />
+            <ResultsTable results={kvinnerElite2026.slice(0, 10)} accent="blue" />
           </div>
         </div>
         <div className="mt-6 flex justify-end">

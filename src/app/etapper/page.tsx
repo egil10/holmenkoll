@@ -51,8 +51,8 @@ export default function EtapperPage() {
 
       <div className="flex gap-2 mb-6">
         {[
-          { id: "menn", label: "Menn" },
-          { id: "kvinner", label: "Kvinner" },
+          { id: "menn", label: "Menn", color: "bg-no-red border-no-red" },
+          { id: "kvinner", label: "Kvinner", color: "bg-no-blue border-no-blue" },
         ].map((c) => (
           <button
             key={c.id}
@@ -60,7 +60,7 @@ export default function EtapperPage() {
             className={cn(
               "px-4 py-2 rounded-lg text-sm font-semibold border transition-colors",
               klass === c.id
-                ? "bg-no-red text-white border-no-red"
+                ? `${c.color} text-white`
                 : "bg-no-paper text-no-muted border-no-line hover:text-no-ink"
             )}
           >
@@ -70,17 +70,26 @@ export default function EtapperPage() {
       </div>
 
       <h3 className="serif text-xl font-bold text-no-ink mb-3 flex items-center gap-2">
-        <Mountain className="w-5 h-5 text-no-red" /> Etappeoversikt &amp; rekorder ({klass})
+        <Mountain className={cn("w-5 h-5", klass === "kvinner" ? "text-no-blue" : "text-no-red")} />{" "}
+        Etappeoversikt &amp; rekorder ({klass})
       </h3>
 
       <div className="space-y-3">
         {stages.map((s) => {
           const rec = records.find((r) => r.leg === s.leg);
           const pct = (s.distance / longest.distance) * 100;
+          const accentSoft = klass === "kvinner" ? "bg-no-blue/8 text-no-blue" : "bg-no-red/8 text-no-red";
+          const accentBar = klass === "kvinner" ? "bg-no-blue" : "bg-no-red";
+          const accentRec = klass === "kvinner" ? "text-no-blue" : "text-no-red";
           return (
             <article key={s.leg} className="card p-5 flex flex-col lg:flex-row gap-4 lg:items-center">
               <div className="flex items-start gap-4 flex-1 min-w-0">
-                <div className="shrink-0 w-12 h-12 rounded-lg bg-no-red/8 text-no-red font-bold serif text-lg flex items-center justify-center">
+                <div
+                  className={cn(
+                    "shrink-0 w-12 h-12 rounded-lg font-bold serif text-lg flex items-center justify-center",
+                    accentSoft
+                  )}
+                >
                   {s.leg}
                 </div>
                 <div className="min-w-0">
@@ -102,14 +111,14 @@ export default function EtapperPage() {
                 </div>
                 <div className="w-full lg:w-48 h-1.5 bg-no-line rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-no-red"
+                    className={cn("h-full", accentBar)}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
                 {rec ? (
                   <div className="text-xs space-y-0.5 lg:text-right">
                     <p className="flex items-center gap-1 lg:justify-end font-mono font-bold text-no-ink">
-                      <Timer className="w-3 h-3 text-no-red" /> {rec.time}
+                      <Timer className={cn("w-3 h-3", accentRec)} /> {rec.time}
                     </p>
                     <p className="text-no-muted">
                       {rec.runner} · {rec.team} · {rec.year}
