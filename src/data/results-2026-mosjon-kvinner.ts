@@ -1,4 +1,4 @@
-// Holmenkollstafetten 2026 — Bedrift & mosjonslag flest kvinner (top 1-300)
+// Holmenkollstafetten 2026 — Bedrift & mosjonslag flest kvinner (full 1-545)
 // Source: sportsidioten.no
 import type { Result } from "./results-2026";
 
@@ -303,6 +303,251 @@ const data = `
 298|AVCO|1:20:38
 299|Folkehelseinstituttet BIL 3|1:20:39
 300|Oslo Tannlegeforening|1:20:39
+301|SH Arkitekter AS|1:20:41
+302|Kid Interiør|1:20:41
+303|DNB P&C|1:20:42
+304|EMPET|1:20:42
+305|Langeland skole|1:20:45
+306|KA Tromsø|1:20:45
+307|DSA 1|1:20:46
+308|Løpeglede 2|1:20:49
+309|Telenor YPN|1:20:49
+310|Siggerud skole|1:20:49
+311|Berg AKS|1:20:50
+312|Enora 7|1:20:52
+313|Forbrukerrådet BIL|1:20:52
+314|Bymiljøetaten 3|1:20:54
+315|Sats Restelag|1:20:54
+316|Active Brands 2|1:20:54
+317|AS Financiering|1:20:57
+318|Posten Bring Aktiv 4|1:20:57
+319|PHARMAQ BIL 2|1:20:58
+320|Telenor Shared Services|1:20:59
+321|Anestesi og operasjon Radiumhospitalet|1:21:00
+322|UiO Geofag-studentene|1:21:00
+323|Statens vegvesen BIL O&A 2|1:21:01
+324|BASF|1:21:01
+325|Advokatforeningen|1:21:03
+326|Dynea Dream team 1|1:21:04
+327|Lovdata BIL|1:21:06
+328|BAMS2|1:21:08
+329|Brannfjell skole|1:21:09
+330|Bonaventura|1:21:10
+331|Advokatfirmaet Sulland|1:21:10
+332|Fagerborg Skole|1:21:11
+333|Risky Rønners 1|1:21:11
+334|TINE Kundereiser med venner|1:21:15
+335|Friskvern Running Club|1:21:16
+336|CanCell UiO|1:21:19
+337|Tollernes IL – lag 2|1:21:19
+338|Radium Runners|1:21:24
+339|LKBIL Strekk og bøy|1:21:25
+340|SATS Carl Berner|1:21:29
+341|Team NSF Oslo|1:21:29
+342|Advokatfirmaet Dehn DA|1:21:30
+343|Fjellsrud skole|1:21:32
+344|NRK Nyheter|1:21:32
+345|SERO AS|1:21:33
+346|NHO Byggenæringen|1:21:34
+347|Boston Consulting Group 3|1:21:34
+348|Varde Hartmark AS|1:21:37
+349|DSS 3|1:21:38
+350|PHARMAQ BIL 1|1:21:41
+351|Bydel Søndre Nordstrand|1:21:41
+352|NMBU Veterinærhøgskolen|1:21:41
+353|Oslo Tannlegeforening 2|1:21:42
+354|Nyfødtintensiv Ullevål lag 2|1:21:42
+355|Solfjellshøgda helsehus|1:21:45
+356|TEAM NIKKEN|1:21:46
+357|Gausdal ungdomsskole|1:21:46
+358|UiO Lingvistiske og nordiske studier|1:21:46
+359|Aker Sykehus Medisinsk Biokjemi|1:21:47
+360|Nydalsveien 33|1:21:47
+361|Menon Economics 2|1:21:48
+362|Tise|1:21:48
+363|Dette er fortsatt et arbeidsmiljøtiltak|1:21:51
+364|Garmo IL|1:21:52
+365|Rettsrunners|1:21:53
+366|TRY Dig 2|1:21:53
+367|DNB Bergen Bedrift|1:21:53
+368|DPSG|1:21:54
+369|Bane NOR SMS|1:21:54
+370|Everland Run Club|1:21:54
+371|LPO Arkitekter|1:21:58
+372|Snarøya skole|1:21:58
+373|Helfo 1|1:21:59
+374|Folkehelseinstituttet BIL 4|1:22:01
+375|Baker Hansen|1:22:02
+376|Carlings|1:22:03
+377|GeriaTriatlon|1:22:03
+378|Yankees|1:22:04
+379|Rud VGS|1:22:05
+380|Intensiv Ahus|1:22:05
+381|Kjelsås skole|1:22:05
+382|Aurskog Sparebank|1:22:06
+383|EY BIL Tax & Law 2|1:22:07
+384|Telenor 5G Fart|1:22:08
+385|DNV Group Finance & Legal|1:22:11
+386|Lett på laben|1:22:12
+387|Stor-Elvdals sprekeste|1:22:15
+388|Fjellhamar skole|1:22:16
+389|Ellingsrudåsen skole|1:22:16
+390|F21|1:22:18
+391|Nissen united|1:22:18
+392|The Propofools|1:22:18
+393|Enhet for hjemmebaserte tjenester|1:22:19
+394|Wikborg Rein BIL 4|1:22:20
+395|SpareBank 1 SMN ETT SMN 2|1:22:21
+396|Landøya ungdomsskole|1:22:22
+397|Bekkestua barneskole|1:22:24
+398|Hundsund ungdomsskole|1:22:24
+399|Painkillers|1:22:24
+400|ØNH Ahus 1 2|1:22:25
+401|Lynet McQueens|1:22:25
+402|SAV Lovisenberg|1:22:29
+403|Fafo BIL|1:22:29
+404|Indre Østfold Legevakt|1:22:31
+405|PO/Intensiv|1:22:32
+406|Søndre Follo ambulanse|1:22:33
+407|Mestring og rehabilitering|1:22:34
+408|Norges Håndballforbund Isbjørnene|1:22:36
+409|NBBL|1:22:37
+410|Ugrei løpeforening|1:22:37
+411|Bjølsen skole|1:22:38
+412|Urologen Aker|1:22:38
+413|Telenor Linx|1:22:41
+414|Team Haugerud|1:22:44
+415|INPUT INTERIOR|1:22:44
+416|Team Holzweiler|1:22:45
+417|Gyldendal 3|1:22:48
+418|Try Opt|1:22:50
+419|Forever Jong|1:22:52
+420|Avonova 3|1:22:53
+421|THE THIEF|1:22:54
+422|Oslo politidistrikt FSI lag 1|1:22:55
+423|Humana Solhaugen|1:22:56
+424|Møller Synergi|1:22:57
+425|Anniken Athletics|1:22:58
+426|DNB GC|1:23:00
+427|Hersleb vgs|1:23:01
+428|Landbruksdirektoratet 1|1:23:01
+429|BAMA 22|1:23:01
+430|Team Coop Elite Backup|1:23:03
+431|VVHF Full Takycardia|1:23:04
+432|Brækhus Advokatfirma 2|1:23:05
+433|DNRunners|1:23:06
+434|DNB Sbanken Kondis på Kredit|1:23:06
+435|Folkehelseinstituttet BIL 6|1:23:08
+436|6 Nord|1:23:09
+437|NAV Gamle Oslo|1:23:09
+438|Sense|1:23:10
+439|Statens vegvesen BIL O&A|1:23:12
+440|Lovisenberg Rehabilitering 1 2|1:23:15
+441|NOVA OsloMet|1:23:15
+442|SFOS 1|1:23:15
+443|NFP & NAY|1:23:15
+444|IABIL Elite|1:23:15
+445|Ingieråsen ungdomsskole|1:23:19
+446|SpareBank 1 SMN ETT SMN 1|1:23:21
+447|Nortura SA 2|1:23:24
+448|Rosenhopp 2|1:23:24
+449|Godt Brød lag 1|1:23:25
+450|Ahus akuttlaget|1:23:25
+451|NPE 1|1:23:26
+452|Tekna BIL 1|1:23:30
+453|NSF Oslo Akutt geriatrisk|1:23:31
+454|Eikeli videregående skole|1:23:31
+455|OUS Fysioterapi Medisinsk klinikk|1:23:33
+456|Unicare Fram|1:23:33
+457|Dopinglabberne|1:23:34
+458|Hjemmetjenesten 2|1:23:35
+459|Bymiljøetaten 4|1:23:37
+460|Visma SW Int. Social Runners|1:23:38
+461|Minx|1:23:39
+462|Nordseter skole 2|1:23:40
+463|Aller Media 2|1:23:42
+464|Radiumhospitalet klinisk service|1:23:42
+465|NIVAS DIVAS|1:23:43
+466|Nordtvet|1:23:44
+467|Vigsnæs + Kosberg ++ Arkitekter|1:23:45
+468|De skarpskodde|1:23:48
+469|Treningsklubben Ila|1:23:48
+470|Nav Arbeidslivssenter Innlandet|1:23:49
+471|Gjensidige Tribe Privat|1:23:50
+472|Advisense 3|1:23:54
+473|Nesodden kommune 1|1:24:00
+474|De holdbare rosa EA|1:24:00
+475|VOICE|1:24:01
+476|Ullevål Sogn Barnehageområde 2|1:24:03
+477|Vinmonopolet AS|1:24:03
+478|Datatilsynet|1:24:04
+479|Essity Health & Medical|1:24:04
+480|Essity Personal Care|1:24:04
+481|LOfavør superstars|1:24:08
+482|Lederlaget Ahus|1:24:09
+483|Arbeidsforskningsinstituttet|1:24:09
+484|Kastellet skole|1:24:09
+485|POwer|1:24:09
+486|Asker kommune OSU|1:24:12
+487|CMS Kluge Advokatfirma 2|1:24:14
+488|Team Coop: WoW|1:24:15
+489|Princess 1|1:24:16
+490|Forebyggende helsetjenester barn og unge|1:24:16
+491|Psykologisk Institutt UiO KFA|1:24:18
+492|Høyer|1:24:18
+493|Team France|1:24:18
+494|Øyeavdelingen Betanien Hospital|1:24:19
+495|Fjellstrand skole|1:24:20
+496|NOVA Spektrum|1:24:22
+497|UiO Utdanningsløperne 2|1:24:22
+498|DNB deltid Bergen|1:24:24
+499|IVF OUS fast and progressive runners|1:24:24
+500|POST 8 LDS|1:24:25
+501|OUS rusmiddelforskning|1:24:28
+502|Precis Digital Elite|1:24:28
+503|SØA 2|1:24:34
+504|Ullern helsehus|1:24:37
+505|Universitetet i Innlandet campus Hamar|1:24:37
+506|Dynea Dream team 2|1:24:38
+507|Nordseter skole 1|1:24:39
+508|Ekeberg Runners Club|1:24:39
+509|VILLOID|1:24:40
+510|Operasjon 1 Transplantasjon|1:24:40
+511|Bydel Sagene Maridalsveien boliger|1:24:40
+512|Team Cøkum|1:24:41
+513|Lovisenberg knark eller knep|1:24:41
+514|Tverrfaglig Trøbbel|1:24:43
+515|Otto Treider Private Gymnas|1:24:44
+516|UiO Realfag og teknologi|1:24:44
+517|Handelshøyskolen BI 4|1:24:46
+518|Pleie og Omsorg Lag 1|1:24:47
+519|Statped 1|1:24:48
+520|Protector Forsikring 2|1:24:52
+521|Veitvet skole|1:24:55
+522|Blommenholm|1:24:56
+523|Advokatfirmaet Haavind 2|1:25:00
+524|Trygderetten|1:25:03
+525|Vestre Viken Team Staselig|1:25:03
+526|Over alle grenser|1:25:05
+527|Team Barnemark|1:25:07
+528|SPK 2|1:25:09
+529|Refstad skole 2|1:25:09
+530|Cruit|1:25:09
+531|Sykehjemsetaten administrasjon|1:25:11
+532|Beauty & Booty|1:25:11
+533|Akademiet Realfagsskole Oslo|1:25:12
+534|DNB Spissen|1:25:12
+535|Fenstad Powerwalkers|1:25:14
+536|10% ØKO|1:25:14
+537|HELBIL|1:25:15
+538|SkiGeilo|1:25:15
+539|Løven BIL|1:25:15
+540|NHO Reiseliv|1:25:16
+541|Nyfødt intensiv RH|1:25:16
+542|Lawai|1:25:16
+543|Vitux|1:25:16
+544|LUIsvett 2|1:25:17
+545|Nyfødtintensiv Ullevål|1:25:17
 `;
 
 export const mosjonKvinner2026Full: Result[] = data

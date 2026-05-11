@@ -11,6 +11,17 @@ import {
 } from "./results-2026-full";
 import { mosjonMenn2026Full } from "./results-2026-mosjon-menn";
 import { mosjonKvinner2026Full } from "./results-2026-mosjon-kvinner";
+import {
+  mennBedrift2025,
+  kvinnerBedrift2025,
+  mennJunior2025,
+  kvinnerJunior2025,
+  mennVeteran2025,
+  kvinnerVeteran2025,
+  mosjonMenn2025,
+  mosjonKvinner2025,
+} from "./results-2025-full";
+import { mennBedrift2024, kvinnerBedrift2024 } from "./results-2024-full";
 
 const r = (
   rows: Array<[number, string, string]>
@@ -372,6 +383,14 @@ export const results: ResultsIndex = {
     "kvinner-elite": kvinnerElite2025,
     "menn-senior": mennSenior2025,
     "kvinner-senior": kvinnerSenior2025,
+    "menn-junior": mennJunior2025,
+    "kvinner-junior": kvinnerJunior2025,
+    "menn-veteran": mennVeteran2025,
+    "kvinner-veteran": kvinnerVeteran2025,
+    "menn-bedrift": mennBedrift2025,
+    "kvinner-bedrift": kvinnerBedrift2025,
+    "bedrift-mosjonslag-flest-menn": mosjonMenn2025,
+    "bedrift-mosjonslag-flest-kvinner": mosjonKvinner2025,
   },
   2024: {
     "menn-elite": mennElite2024,
@@ -379,6 +398,8 @@ export const results: ResultsIndex = {
     "menn-senior": mennSenior2024,
     "kvinner-senior": kvinnerSenior2024,
     "menn-junior": mennJunior2024,
+    "menn-bedrift": mennBedrift2024,
+    "kvinner-bedrift": kvinnerBedrift2024,
   },
   2023: {
     "menn-elite": mennElite2023,

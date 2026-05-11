@@ -48,16 +48,22 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/resultater"
+                href="/lag"
                 className="inline-flex items-center gap-2 bg-no-red text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:bg-no-red-dark transition-colors"
               >
-                Se resultater <ArrowRight className="w-4 h-4" />
+                Finn ditt lag <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/resultater"
+                className="inline-flex items-center gap-2 bg-no-paper border border-no-line text-no-ink px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-no-ink/5 transition-colors"
+              >
+                Bla i resultater
               </Link>
               <Link
                 href="/historie"
                 className="inline-flex items-center gap-2 bg-no-paper border border-no-line text-no-ink px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-no-ink/5 transition-colors"
               >
-                Utforsk historien
+                Historien
               </Link>
             </div>
 
@@ -274,6 +280,13 @@ export default function HomePage() {
               title: "Historie",
               text: "Fra Tjalve i 1923 til folkefest i 2026 — alle milepælene.",
               icon: CalendarDays,
+              accent: "red",
+            },
+            {
+              href: "/lag",
+              title: "Finn ditt lag",
+              text: "Søk på over 1 800 lagnavn. Se hvordan ditt firma har gjort år for år.",
+              icon: Users,
               accent: "red",
             },
             {

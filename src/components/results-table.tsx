@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Trophy, Medal, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { Trophy, Medal, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import { cn, formatTime, timeToSeconds } from "@/lib/utils";
 import type { Result } from "@/data/results-2026";
+import { slugify } from "@/lib/team-index";
 
 type Accent = "red" | "blue" | "neutral";
 
@@ -83,7 +85,15 @@ export function ResultsTable({
                       </span>
                     </div>
                   </td>
-                  <td className="font-medium text-no-ink">{r.team}</td>
+                  <td className="font-medium text-no-ink">
+                    <Link
+                      href={`/lag/${slugify(r.team)}`}
+                      className="hover:text-no-red inline-flex items-center gap-1 group/link"
+                    >
+                      {r.team}
+                      <ArrowUpRight className="w-3 h-3 opacity-0 group-hover/link:opacity-60 transition-opacity" />
+                    </Link>
+                  </td>
                   <td className="text-right font-mono tabular-nums text-no-ink">
                     {formatTime(r.time)}
                   </td>
