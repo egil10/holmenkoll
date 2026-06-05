@@ -16,10 +16,13 @@ import {
 import { StatCard } from "@/components/stat-card";
 import { SectionHeader } from "@/components/section-header";
 import { ResultsTable } from "@/components/results-table";
-import { mennElite2026, kvinnerElite2026 } from "@/data/results-2026";
+import { results } from "@/data/results-all";
 import { milestones } from "@/data/timeline";
 
 export default function HomePage() {
+  const mennElite2026 = results[2026]?.["menn-elite"] ?? [];
+  const kvinnerElite2026 = results[2026]?.["kvinner-elite"] ?? [];
+
   return (
     <div>
       {/* Hero */}
@@ -123,7 +126,7 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="9. mai 2026"
           title="Siste resultater"
-          subtitle="Topp 10 i menn elite og kvinner elite fra årets utgave. Ull/Kisa tok sin fjerde strake seier; SK Vidar satte ny løyperekord i kvinneklassen."
+          subtitle="Full eliteklasse for menn og kvinner fra årets utgave. Ull/Kisa tok sin fjerde strake seier; SK Vidar satte ny løyperekord i kvinneklassen."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
@@ -135,7 +138,7 @@ export default function HomePage() {
               </div>
               <span className="text-xs text-no-muted font-mono">15 etapper</span>
             </div>
-            <ResultsTable results={mennElite2026.slice(0, 10)} accent="red" />
+            <ResultsTable results={mennElite2026} accent="red" />
           </div>
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -146,7 +149,7 @@ export default function HomePage() {
               </div>
               <span className="text-xs text-no-muted font-mono">15 etapper</span>
             </div>
-            <ResultsTable results={kvinnerElite2026.slice(0, 10)} accent="blue" />
+            <ResultsTable results={kvinnerElite2026} accent="blue" />
           </div>
         </div>
         <div className="mt-6 flex justify-end">

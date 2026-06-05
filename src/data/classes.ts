@@ -1,11 +1,11 @@
-// Holmenkollstafetten class catalog
-// F = Friidrett (Athletics), A = Sammensatte (Mixed/Combined), B = Bedrift, S = Studenter, M = Militær
+// Holmenkollstafetten class catalog.
+// F = friidrett, A = bedrifts-/mosjonsklasser, B = bedrift, S = studenter, M = militaer.
 export type ClassDef = {
   code: string;
-  slug: string; // sportsidioten URL slug fragment, e.g. "menn-elite"
+  slug: string;
   label: string;
   gender: "M" | "K" | "X";
-  group: "elite" | "alder" | "bedrift" | "mosjon" | "student" | "militaer" | "veldedig";
+  group: "elite" | "alder" | "bedrift" | "mosjon" | "student" | "militaer" | "veldedig" | "para";
   description?: string;
 };
 
@@ -21,16 +21,29 @@ export const classes: ClassDef[] = [
   { code: "F9", slug: "kvinner-veteran", label: "Kvinner veteran", gender: "K", group: "alder" },
   { code: "F5", slug: "menn-superveteran", label: "Menn superveteran", gender: "M", group: "alder" },
   { code: "F10", slug: "kvinner-superveteran", label: "Kvinner superveteran", gender: "K", group: "alder" },
-  // Bedrift / mosjon
+
+  // Bedrift
   { code: "B1", slug: "menn-bedrift", label: "Menn bedrift", gender: "M", group: "bedrift" },
   { code: "B4", slug: "kvinner-bedrift", label: "Kvinner bedrift", gender: "K", group: "bedrift" },
-  { code: "A1M", slug: "bedrift-mosjonslag-flest-menn", label: "Bedrift & mosjon (flest menn)", gender: "X", group: "mosjon" },
-  { code: "A1K", slug: "bedrift-mosjonslag-flest-kvinner", label: "Bedrift & mosjon (flest kvinner)", gender: "X", group: "mosjon" },
+
+  // Bedrift / mosjon
+  { code: "A1", slug: "a1-bedrift-mosjon", label: "A1 bedrift, mosjon, andre lag", gender: "X", group: "mosjon" },
+  { code: "A2", slug: "a2-bedrift-mosjon", label: "A2 bedrift, mosjon, andre lag", gender: "X", group: "mosjon" },
+  { code: "A3", slug: "a3-andre-saerforbund", label: "Andre særforbund i NIF", gender: "X", group: "mosjon" },
+  { code: "A4", slug: "a4-55-pluss", label: "55+", gender: "X", group: "mosjon" },
+
+  // Industry / charity categories
+  { code: "A1-B", slug: "a1-bygg-anlegg-kreftforeningen", label: "A1 bygg/anlegg for Kreftforeningen", gender: "X", group: "veldedig" },
+  { code: "A1-C", slug: "a1-finans-kreftforeningen", label: "A1 finans for Kreftforeningen", gender: "X", group: "veldedig" },
+  { code: "A2-B", slug: "a2-bygg-anlegg-kreftforeningen", label: "A2 bygg/anlegg for Kreftforeningen", gender: "X", group: "veldedig" },
+  { code: "A2-C", slug: "a2-finans-kreftforeningen", label: "A2 finans for Kreftforeningen", gender: "X", group: "veldedig" },
+  { code: "A6", slug: "a6-ideelle-organisasjoner", label: "Ideelle organisasjoner", gender: "X", group: "veldedig" },
+
   // Special
   { code: "S1", slug: "menn-studenter", label: "Menn studenter", gender: "M", group: "student" },
   { code: "S2", slug: "kvinner-studenter", label: "Kvinner studenter", gender: "K", group: "student" },
-  { code: "M1", slug: "militaere-forlegninger", label: "Militære forlegninger", gender: "X", group: "militaer" },
-  { code: "V1", slug: "veldedige-organisasjoner", label: "Veldedige organisasjoner", gender: "X", group: "veldedig" },
+  { code: "M1", slug: "militaere-forlegninger", label: "Militaere forlegninger", gender: "X", group: "militaer" },
+  { code: "Para", slug: "para", label: "Para", gender: "X", group: "para" },
 ];
 
 export const groupLabel: Record<string, string> = {
@@ -39,6 +52,7 @@ export const groupLabel: Record<string, string> = {
   bedrift: "Bedrift",
   mosjon: "Mosjonsklasser",
   student: "Studenter",
-  militaer: "Militære",
+  militaer: "Militaere",
   veldedig: "Veldedige org.",
+  para: "Para",
 };

@@ -80,7 +80,7 @@ export default function ResultsPage() {
       <SectionHeader
         eyebrow="Resultater"
         title="Alle klasser, alle år"
-        subtitle="Velg år og klasse. Datasettet dekker eliteklassene tilbake til 2010 og alle 18 klasser fra 2026. Søk på lagnavn for å finne ditt eget."
+        subtitle="Velg år og klasse. Datasettet bruker komplette offisielle UltimateLIVE-tabeller for 2024, 2025 og 2026, og eldre eliteutdrag der full timingdata ikke er hentet ennå."
       />
 
       {/* Year selector */}
@@ -216,8 +216,8 @@ export default function ResultsPage() {
       )}
 
       <p className="text-xs text-no-muted mt-4 italic">
-        Antall lag i tabellen varierer per kilde. For komplette resultater (alle plasseringer i alle klasser),
-        bruk arrangørens timing-partner lenket ovenfor.
+        2024-2026 er hentet direkte fra arrangørens UltimateLIVE-tabeller med alle tilgjengelige plasseringer per klasse.
+        Eldre år er foreløpig mindre komplette og lenker videre til opprinnelig timingkilde.
       </p>
     </div>
   );

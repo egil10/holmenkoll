@@ -3,9 +3,8 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { Trophy, Medal, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
-import { cn, formatTime, timeToSeconds } from "@/lib/utils";
+import { cn, formatTime, timeToSeconds, slugify } from "@/lib/utils";
 import type { Result } from "@/data/results-2026";
-import { slugify } from "@/lib/team-index";
 
 type Accent = "red" | "blue" | "neutral";
 

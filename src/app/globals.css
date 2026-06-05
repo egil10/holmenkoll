@@ -14,7 +14,11 @@
   --no-line: rgba(14, 18, 38, 0.08);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Keep in-page anchors clear of the fixed header (3px bar + 64px bar). */
+  scroll-padding-top: 5rem;
+}
 
 body {
   background-color: var(--no-cream);
@@ -22,6 +26,31 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lock background scroll while the mobile menu is open. */
+body.nav-open { overflow: hidden; }
+
+/* Keyboard-visible focus ring across all interactive elements. Mouse clicks
+   keep the clean look; tab/keyboard navigation gets a clear red ring. */
+:focus-visible {
+  outline: 2px solid var(--no-red);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect users who prefer less motion: drop smooth scroll, hover lifts and
+   entrance animations. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card-hover:hover { transform: none; }
 }
 
 /* Subtle paper texture using flag-inspired diagonal lines */

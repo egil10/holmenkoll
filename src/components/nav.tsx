@@ -31,6 +31,16 @@ export function Nav() {
     return () => window.removeEventListener("scroll", h);
   }, []);
 
+  // Close the mobile menu on route change and lock background scroll while open.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", open);
+    return () => document.body.classList.remove("nav-open");
+  }, [open]);
+
   return (
     <header
       className={cn(
@@ -92,6 +102,8 @@ export function Nav() {
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-no-muted hover:text-no-ink hover:bg-no-ink/5 transition-colors"
               onClick={() => setOpen((v) => !v)}
               aria-label="Meny"
+              aria-expanded={open}
+              aria-controls="mobile-nav"
             >
               {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -100,7 +112,7 @@ export function Nav() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-no-line bg-no-paper">
+        <div id="mobile-nav" className="md:hidden border-t border-no-line bg-no-paper">
           <div className="px-4 py-3 flex flex-col gap-1">
             {LINKS.map((l) => {
               const active = pathname === l.href;

@@ -34,3 +34,6 @@ pnpm-debug.log*
 
 # inspiration / private archive (kept locally only)
 .archive/
+
+# claude code local state (memory, settings)
+.claude/

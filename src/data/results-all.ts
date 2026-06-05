@@ -22,6 +22,7 @@ import {
   mosjonKvinner2025,
 } from "./results-2025-full";
 import { mennBedrift2024, kvinnerBedrift2024 } from "./results-2024-full";
+import { generatedResults } from "./results-generated";
 
 const r = (
   rows: Array<[number, string, string]>
@@ -359,48 +360,9 @@ const kvinnerElite2010 = r([
 export type ResultsIndex = Record<number, Partial<Record<string, Result[]>>>;
 
 export const results: ResultsIndex = {
-  2026: {
-    "menn-elite": mennElite2026,
-    "kvinner-elite": kvinnerElite2026,
-    "menn-senior": mennSenior2026,
-    "kvinner-senior": kvinnerSenior2026,
-    "menn-junior": mennJunior2026,
-    "kvinner-junior": kvinnerJunior2026,
-    "menn-veteran": mennVeteran2026,
-    "kvinner-veteran": kvinnerVeteran2026,
-    "menn-superveteran": mennSuperveteran2026,
-    "kvinner-superveteran": kvinnerSuperveteran2026,
-    "menn-bedrift": mennBedrift2026Full,
-    "kvinner-bedrift": kvinnerBedrift2026Full,
-    "bedrift-mosjonslag-flest-menn": mosjonMenn2026Full,
-    "bedrift-mosjonslag-flest-kvinner": mosjonKvinner2026Full,
-    "menn-studenter": studenterMenn2026,
-    "kvinner-studenter": studenterKvinner2026,
-    "veldedige-organisasjoner": veldedige2026Full,
-  },
-  2025: {
-    "menn-elite": mennElite2025,
-    "kvinner-elite": kvinnerElite2025,
-    "menn-senior": mennSenior2025,
-    "kvinner-senior": kvinnerSenior2025,
-    "menn-junior": mennJunior2025,
-    "kvinner-junior": kvinnerJunior2025,
-    "menn-veteran": mennVeteran2025,
-    "kvinner-veteran": kvinnerVeteran2025,
-    "menn-bedrift": mennBedrift2025,
-    "kvinner-bedrift": kvinnerBedrift2025,
-    "bedrift-mosjonslag-flest-menn": mosjonMenn2025,
-    "bedrift-mosjonslag-flest-kvinner": mosjonKvinner2025,
-  },
-  2024: {
-    "menn-elite": mennElite2024,
-    "kvinner-elite": kvinnerElite2024,
-    "menn-senior": mennSenior2024,
-    "kvinner-senior": kvinnerSenior2024,
-    "menn-junior": mennJunior2024,
-    "menn-bedrift": mennBedrift2024,
-    "kvinner-bedrift": kvinnerBedrift2024,
-  },
+  2026: generatedResults[2026],
+  2025: generatedResults[2025],
+  2024: generatedResults[2024],
   2023: {
     "menn-elite": mennElite2023,
     "kvinner-elite": kvinnerElite2023,
